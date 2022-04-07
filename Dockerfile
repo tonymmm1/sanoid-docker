@@ -3,7 +3,7 @@ RUN apk add --update git
 RUN git clone -b v2.1.0 https://github.com/jimsalterjrs/sanoid
 
 FROM alpine:latest
-RUN apk add --update procps
+RUN apk add --update procps zfs
 COPY --from=builder ./sanoid/sanoid ./sanoid/syncoid ./sanoid/findoid ./sanoid/sleepymutex /usr/local/sbin/
 RUN mkdir /etc/sanoid && touch /etc/sanoid.conf
 COPY --from=builder ./sanoid/sanoid.defaults.conf /etc/sanoid
