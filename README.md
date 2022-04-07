@@ -12,7 +12,7 @@ Mount sanoid.conf in /etc/sanoid/sanoid.conf to set sanoid configuration.
 
 Example:
 ```
-docker run --privileged -d -v ./sanoid.conf:/etc/sanoid.conf:ro tonymmm1/sanoid-docker:latest
+docker run --privileged -d -v ./sanoid.conf:/etc/sanoid/sanoid.conf:ro tonymmm1/sanoid-docker:latest
 ```
 
 [Github](https://github.com/tonymmm1/sanoid-docker)
